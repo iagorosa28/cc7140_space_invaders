@@ -7,6 +7,10 @@ public class Player : MonoBehaviour
     public float speed = 5.0f;
     public float boundX = 8.5f;
 
+    public GameObject tiroPrefab;
+    public Transform firePoint;
+
+
     private Rigidbody2D rb2d;
     void Start()
     {
@@ -31,5 +35,10 @@ public class Player : MonoBehaviour
         var posicao = transform.position;
         posicao.x = Mathf.Clamp(posicao.x, -boundX, boundX);
         transform.position = posicao;
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(tiroPrefab, firePoint.position, Quaternion.identity);
+        }
     }
 }
