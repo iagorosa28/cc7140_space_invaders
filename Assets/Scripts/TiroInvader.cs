@@ -19,8 +19,8 @@ public class TiroInvader : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
             Destroy(gameObject);
+            GameManager.LoseLife();
         }
     }
 }

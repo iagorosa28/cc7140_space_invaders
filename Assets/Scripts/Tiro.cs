@@ -22,6 +22,7 @@ public class Tiro : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
+            GameManager.AddScore(10);
         }
     }
 }
