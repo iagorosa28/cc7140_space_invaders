@@ -15,8 +15,7 @@ public class LevelProgressor : MonoBehaviour
             else if (scene == "Level2")
                 SceneManager.LoadScene("Level3");
             else if (scene == "Level3")
-                SceneManager.LoadScene("Level1");
-            //    SceneManager.LoadScene("Win");
+                SceneManager.LoadScene("Win");
         }
     }
 

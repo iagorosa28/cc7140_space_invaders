@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         if (Lives <= 0)
         {
             // sem vidas: vai para tela de Game Over
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Lose");
         }
     }
 
