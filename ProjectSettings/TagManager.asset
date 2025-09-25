@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Invader
   - Tiro
+  - TiroInvader
   layers:
   - Default
   - TransparentFX

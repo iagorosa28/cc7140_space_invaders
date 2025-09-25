@@ -7,6 +7,9 @@ public class InvaderOne : MonoBehaviour
     private float waitTime = 1.0f;
     private float speed = 2.0f;
 
+    public GameObject tiroInvaderPrefab;
+    public Transform firePoint;
+
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -23,6 +26,12 @@ public class InvaderOne : MonoBehaviour
         {
             ChangeState();
             timer = 0.0f;
+
+            int n = Random.Range(0, 2);
+            if (n == 1)
+            {
+                Instantiate(tiroInvaderPrefab, firePoint.position, Quaternion.identity);
+            }
         }
     }
 
